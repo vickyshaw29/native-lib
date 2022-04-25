@@ -3,6 +3,7 @@ import {ScrollView,View,Text,TouchableOpacity} from 'react-native';
 import QuizUtils from '../../../utils/quiz/quizUtils';
 import { useNavigation } from '@react-navigation/native';
 import { Question,Answer } from '../../atoms';
+import styles from './QuizStyles'
 
 function shuffle(array: any[]) {
     let currentIndex = array.length, randomIndex;
@@ -64,13 +65,7 @@ const Quiz = ({ activeQuestionId, giveAnswer, quizData }: QuestionScreenPropsT) 
 
       {answersComponents && answersComponents}
 
-      <View
-        style={{
-          marginTop: 'auto',
-          justifyContent: 'center',
-          display: 'flex',
-          flexDirection: 'row',
-        }}>
+      <View style={styles.quizContainer}>
         <Text>
           {' '}
           {(questionData?.order || 0) + 1} /{' '}
@@ -82,12 +77,7 @@ const Quiz = ({ activeQuestionId, giveAnswer, quizData }: QuestionScreenPropsT) 
         onPress={() => {
           navigation.goBack();
         }}
-        style={{
-          marginTop: 32,
-          justifyContent: 'center',
-          display: 'flex',
-          flexDirection: 'row',
-        }}>
+        style={styles.quizTitleContainer}>
         <Text>
           Interrompi quiz
         </Text>

@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
-import {View,  Text} from 'react-native';
-import {QuizDataT, QuizResultsI, ResultI} from '../../../interfaces/QuizInterface';
+import React, {useEffect} from 'react';
+import {View, Text} from 'react-native';
+import {
+  QuizDataT,
+  QuizResultsI,
+  ResultI,
+} from '../../../interfaces/QuizInterface';
 //import HTMLRenderer from '../../HTMLRenderer';
 import QuizUtils from '../../../utils/quiz/quizUtils';
-import {Button} from '../../atoms'
+import {Button} from '../../atoms';
 
 type QuizFeedbackScreenPropsT = {
   quizData: QuizDataT;
@@ -48,14 +52,16 @@ const QuizFeedbackScreen = ({
             questionId: activeQuestionId,
             answerId: activeAnswerId,
           });
-        }}/>
+        }}
+      />
       {canRetryQuestion && (
         <Button
           title="Riprova"
           color=""
           onPress={() => {
             retryQuestion({questionId: activeQuestionId});
-          }}/>
+          }}
+        />
       )}
     </View>
   );
