@@ -1,5 +1,5 @@
 // import { evaluateConditions } from "../../../../app/query";
-import { QuizDataT,ResultI,Feedback } from "../helper/QuizInterface";
+import { QuizDataT,ResultI,Feedback } from "../../interfaces/QuizInterface";
 import lodash from 'lodash'
 
 export type AreaReportT = {

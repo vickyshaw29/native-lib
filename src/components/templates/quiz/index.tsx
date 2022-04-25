@@ -1,8 +1,7 @@
-import React from 'react';
-import useQuizPlayer from './utils/useQuizPlayer';
-import QuestionFeedbackScreen from './screens/QuestionFeedbackScreen';
-import QuizActiveScreen from './screens/QuestionActiveScreen';
-import { AnswerDataT, Feedback, QuizDataT, ResultI } from './helper/QuizInterface';
+import React ,{useEffect,useState} from 'react';
+import useQuizPlayer from '../../../hooks/quizHook/useQuizPlayer';
+import { QuestionFeedbackScreen,QuizActiveScreen } from '../../organisms';
+import { AnswerDataT, Feedback, QuizDataT, ResultI } from '../../../interfaces/QuizInterface';
 //import { LoadingView } from '../../../../ui-kit/Structure';
 import { SafeAreaView ,Text} from 'react-native';
 
@@ -22,19 +21,22 @@ const Quiz = ({ quizData, onQuizCompleted, onStatusChange, feedbackOptions, canR
 		onStatusChange,
 		showQuestionFeedback
 	});
-
+	const [foundStatus, setfoundStatus] = useState<string>(status)
+	useEffect(()=>{
+		setfoundStatus(status)
+	},[status])
 
 	// I quiz all'interno di notifiche
 
-	if (status === 'questionFeedback' && activeQuestionId) {
+	if (foundStatus === 'questionFeedback' && activeQuestionId) {
 		return <QuestionFeedbackScreen canRetryQuestion={canRetryQuestion} retryQuestion={retryQuestion} currentResultSnapshot={currentResultSnapshot} activeQuestionId={activeQuestionId} quizData={quizData} confirmQuestionFeedback={confirmQuestionFeedback} />
 	}
 
-	if (status === 'questionActive' && activeQuestionId) {
+	if (foundStatus === 'questionActive' && activeQuestionId) {
 		return <QuizActiveScreen activeQuestionId={activeQuestionId} giveAnswer={giveAnswer} quizData={quizData} />
 	}
 
-	if (status === 'loading') {
+	if (foundStatus === 'loading') {
 		// return <LoadingView message='In caricamento' />
         return <SafeAreaView><Text>Loading...</Text></SafeAreaView>
 	}

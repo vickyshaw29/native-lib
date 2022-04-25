@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Feedback, QuizDataT, QuizResultI, QuizResultsI, ResultI } from '../helper/QuizInterface';
+import { Feedback, QuizDataT, QuizResultI, QuizResultsI, ResultI } from '../../interfaces/QuizInterface';
 import { proxy, useSnapshot } from 'valtio';
-import QuizUtils from './quizUtils'; 
+import QuizUtils from '../../utils/quiz/quizUtils'; 
 
 
 const useQuizPlayer = ({ quizData, onQuizCompleted, onStatusChange, feedbackOptions, showQuestionFeedback }: { showQuestionFeedback: boolean, feedbackOptions: Feedback[], quizData: QuizDataT, onQuizCompleted: (results:ResultI, feedbackOptions: Feedback[], quizData: QuizDataT) => void , onStatusChange: (status:string) =>  any }) => {

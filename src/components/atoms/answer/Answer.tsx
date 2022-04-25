@@ -1,6 +1,6 @@
 import React from 'react';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
-import { AnswerDataT, QuizDataT } from './QuizInterface';
+import { AnswerDataT } from '../../../interfaces/QuizInterface';
 import {Text,TouchableOpacity} from 'react-native'
 
 
@@ -13,7 +13,6 @@ const Answer = ({ onSelect, answer, isSelected, isDisabled }: { isSelected: bool
         padding: 16,
         backgroundColor: isSelected ? '#005F73' : 'white',
         shadowColor: "#000",
-        // backgroundColor: 'white',
         shadowOffset: {
             width: 0,
             height: 2,

@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {InputPage, LandingPage, TextPage, ButtonPage} from './src/pages';
+import {StoryBook, LandingPage} from './src/pages';
 import QuizPage from './src/pages/QuizPage';
 
 const App = () => {
@@ -22,24 +22,10 @@ const App = () => {
           }}
         />
         <Stack.Screen
-          name="Input"
-          component={InputPage}
+          name="StoryBook"
+          component={StoryBook}
           options={{
-            title: 'Input',
-          }}
-        />
-        <Stack.Screen
-          name="Button"
-          component={ButtonPage}
-          options={{
-            title: 'Button',
-          }}
-        />
-        <Stack.Screen
-          name="Text"
-          component={TextPage}
-          options={{
-            title: 'Text',
+            title: 'StoryBook',
           }}
         />
         <Stack.Screen

@@ -1,4 +1,4 @@
-import {ConditionDataT} from '../helper/QuizInterface'
+import {ConditionDataT} from '../../interfaces/QuizInterface'
 
 export function evaluateCondition(condition: ConditionDataT, context?: any) {
 

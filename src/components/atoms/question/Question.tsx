@@ -1,6 +1,6 @@
 import React from 'react';
 import { View,Text } from 'react-native';
-import { QuestionDataT } from './QuizInterface';
+import { QuestionDataT } from '../../../interfaces/QuizInterface';
 // import { H3 } from '../../../../../ui-kit';
 
 

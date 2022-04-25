@@ -1,9 +1,8 @@
 import React from 'react';
 import {ScrollView,View,Text,TouchableOpacity} from 'react-native';
-import QuizUtils from '../utils/quizUtils';
+import QuizUtils from '../../../utils/quiz/quizUtils';
 import { useNavigation } from '@react-navigation/native';
-import Question from '../helper/Question';
-import Answer from '../helper/Answer';
+import { Question,Answer } from '../../atoms';
 
 function shuffle(array: any[]) {
     let currentIndex = array.length, randomIndex;

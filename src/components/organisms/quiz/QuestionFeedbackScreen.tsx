@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import {View,  Text} from 'react-native';
-import {QuizDataT, QuizResultsI, ResultI} from '../helper/QuizInterface';
+import {QuizDataT, QuizResultsI, ResultI} from '../../../interfaces/QuizInterface';
 //import HTMLRenderer from '../../HTMLRenderer';
-import QuizUtils from '../utils/quizUtils';
-import {Button} from '../../../atoms'
+import QuizUtils from '../../../utils/quiz/quizUtils';
+import {Button} from '../../atoms'
 
 type QuizFeedbackScreenPropsT = {
   quizData: QuizDataT;
