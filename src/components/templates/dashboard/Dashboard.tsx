@@ -3,7 +3,7 @@ import {SafeAreaView, Text, View, FlatList} from 'react-native';
 import styles from './DashboardStyles';
 import {useNavigation} from '@react-navigation/native';
 
-const components = ['Button','Input','Text'];
+const components = ['Button','Input','Text','Quiz'];
 
 const Dashboard = () => {
   type Nav = {
