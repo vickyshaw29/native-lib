@@ -15,4 +15,6 @@ export interface TextProps {
 export type ListProps={
   data:string[],
   isNavigate:boolean;
+  navigate?: (value: string) => void;
 }
+

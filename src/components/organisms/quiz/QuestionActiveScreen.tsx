@@ -43,7 +43,7 @@ const Quiz = ({
     quizData,
     questionId: activeQuestionId,
   });
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
   const shuffledAnswersKeys = React.useMemo(() => {
     return shuffle(Object.keys(answersData));
@@ -102,7 +102,7 @@ const Quiz = ({
 
       <TouchableOpacity
         onPress={() => {
-          navigation.goBack();
+          // navigation?.goBack();
         }}
         style={styles.activeTitleContainer}>
         <Text>Interrompi quiz</Text>

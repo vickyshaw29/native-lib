@@ -4,11 +4,8 @@ import styles from './ListStyles';
 import {ListProps} from '../../../interfaces/atomInterface';
 import {useNavigation} from '@react-navigation/native';
 
-const CustomList = ({data, isNavigate}: ListProps) => {
-  type Nav = {
-    navigate: (value: string) => void;
-  };
-  const {navigate} = useNavigation<Nav>();
+const CustomList = ({data, isNavigate,navigate}: ListProps) => {
+  
   return (
     <SafeAreaView style={styles.sectionContainer}>
       <FlatList
@@ -16,7 +13,7 @@ const CustomList = ({data, isNavigate}: ListProps) => {
         renderItem={({item}) => (
           <View key={item} style={styles.textContainer}>
             <Text
-              onPress={() => isNavigate && navigate(item)}
+              onPress={() => isNavigate && navigate && navigate(item)}
               style={styles.txt}>
               {item}
             </Text>

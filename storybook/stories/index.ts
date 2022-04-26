@@ -1,2 +1,6 @@
 import '../../src/components/atoms/button/Button.stories'
 import '../../src/components/atoms/question/Question'
+import '../../src/components/templates/quiz/Quiz.stories'
+import '../../src/components/templates/dashboard/Dashboard'
+import '../../src/components/organisms/quiz/QuestionActive.stories'
+import '../../src/components/organisms/quiz/QuestionFeedback.stories'
