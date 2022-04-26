@@ -1,9 +1,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {StoryBook, LandingPage} from './src/pages';
+import {LandingPage} from './src/pages';
 import QuizPage from './src/pages/QuizPage';
+import Storybook from './storybook';
 
+//if true stories will be visible;
+let LOAD_STORYBOOk = false;
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -22,13 +25,6 @@ const App = () => {
           }}
         />
         <Stack.Screen
-          name="StoryBook"
-          component={StoryBook}
-          options={{
-            title: 'StoryBook',
-          }}
-        />
-        <Stack.Screen
           name="Quiz"
           component={QuizPage}
           options={{
@@ -40,4 +36,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default LOAD_STORYBOOk === true ? Storybook : App;

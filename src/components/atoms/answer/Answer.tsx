@@ -1,6 +1,6 @@
 import React from 'react';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
-import {AnswerDataT} from '../../../interfaces/QuizInterface';
+import {AnswerDataT,Style} from '../../../interfaces/QuizInterface';
 import {Text, TouchableOpacity} from 'react-native';
 import styles from './AnswerStyles';
 
@@ -9,17 +9,20 @@ const Answer = ({
   answer,
   isSelected,
   isDisabled,
+  answerStyle
 }: {
   isSelected: boolean;
   isDisabled: boolean;
   onSelect: any;
   answer: AnswerDataT;
+  answerStyle:Style
 }) => {
   return (
     <TouchableOpacity
       style={[
         styles.container,
         {backgroundColor: isSelected ? '#005F73' : 'white'},
+        answerStyle
       ]}
       disabled={isDisabled}
       onPress={() => {

@@ -6,7 +6,6 @@ import { AnswerDataT, Feedback, QuizDataT, ResultI } from '../../../interfaces/Q
 import { SafeAreaView ,Text} from 'react-native';
 
 const Quiz = ({ quizData, onQuizCompleted, onStatusChange, feedbackOptions, canRetryQuestion, showQuestionFeedback }: { showQuestionFeedback: boolean, quizData: QuizDataT, onQuizCompleted: (results:ResultI, feedbackOptions: Feedback[], quizData: QuizDataT) => void, onStatusChange: (status: string) => any, feedbackOptions: Feedback[], canRetryQuestion: boolean }) => {
-
 	const {
 		status,
 		activeQuestionId,

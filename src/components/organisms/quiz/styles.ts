@@ -24,6 +24,17 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
   },
+  question: {
+    marginTop: 16,
+    marginBottom: 16,
+    paddingVertical: 16,
+  },
+  answer:{
+    marginTop: 8,
+    marginBottom: 8,
+    padding: 16,
+    elevation: 5,
+  }
 });
 
 export default styles;

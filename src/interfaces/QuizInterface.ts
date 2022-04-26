@@ -99,3 +99,6 @@ export type Feedback = {
     value: string,
     isPositive: boolean
 }
+export type Style={
+    [key:string]:any
+}

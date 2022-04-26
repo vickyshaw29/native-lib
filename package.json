@@ -7,24 +7,45 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "storybook": "watch rnstl ./src --wait=100 | storybook start | yarn start --projectRoot storybook --watchFolders $PWD",
+    "build-storybook": "build-storybook",
+    "rn": "node node_modules/react-native/local-cli/cli.js"
   },
   "dependencies": {
     "@react-native-community/checkbox": "^0.5.12",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.1",
+    "@types/storybook__react-native": "^5.2.1",
     "lodash": "^4.17.21",
     "react": "17.0.2",
     "react-native": "0.68.1",
     "react-native-gesture-handler": "^2.4.1",
     "react-native-safe-area-context": "^4.2.4",
     "react-native-screens": "^3.13.1",
+    "react-native-storybook-loader": "^2.0.5",
     "valtio": "^1.6.0"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src"
+      ],
+      "pattern": "**/*.stories.tsx",
+      "outputFile": "./storybook/storyLoader.js"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.182",
     "@types/react-native": "^0.67.3",
@@ -32,9 +53,11 @@
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.5",
     "eslint": "^7.32.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.67.0",
+    "react-dom": "^17.0.2",
     "react-test-renderer": "17.0.2",
     "typescript": "^4.4.4"
   },

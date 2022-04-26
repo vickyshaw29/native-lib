@@ -12,3 +12,7 @@ export interface InputProps {
 export interface TextProps {
   val: string;
 }
+export type ListProps={
+  data:string[],
+  isNavigate:boolean;
+}
