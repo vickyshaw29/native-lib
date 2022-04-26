@@ -1,8 +1,8 @@
 import {StyleSheet} from 'react-native'
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 22,
-    paddingHorizontal: 10,
+    // marginTop: 22,
+    // paddingHorizontal: 10,
   },
   textContainer:{
     minHeight:40,

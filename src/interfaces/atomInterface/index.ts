@@ -16,5 +16,8 @@ export type ListProps={
   data:string[],
   isNavigate:boolean;
   navigate?: (value: string) => void;
+  style?:{
+    [key:string]:any
+  }
 }
 

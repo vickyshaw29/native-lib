@@ -2,12 +2,11 @@ import React from 'react';
 import {View, FlatList, Text, SafeAreaView} from 'react-native';
 import styles from './ListStyles';
 import {ListProps} from '../../../interfaces/atomInterface';
-import {useNavigation} from '@react-navigation/native';
 
-const CustomList = ({data, isNavigate,navigate}: ListProps) => {
-  
+const CustomList = ({data,isNavigate,navigate,style}: ListProps) => {
+  console.warn(style)
   return (
-    <SafeAreaView style={styles.sectionContainer}>
+    <SafeAreaView style={[styles.sectionContainer,style]}>
       <FlatList
         data={data}
         renderItem={({item}) => (
