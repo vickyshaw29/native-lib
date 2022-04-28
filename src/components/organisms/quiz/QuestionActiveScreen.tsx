@@ -2,7 +2,7 @@ import React from 'react';
 import {ScrollView, View, Text, TouchableOpacity} from 'react-native';
 import QuizUtils from '../../../utils/quiz/quizUtils';
 import {useNavigation} from '@react-navigation/native';
-import {Question, Answer} from '../../atoms';
+import {Question, Answer, SJText} from '../../atoms';
 import styles from './styles';
 
 function shuffle(array: any[]) {
@@ -89,15 +89,14 @@ const Quiz = ({
           }}
         />
       )}
-
       {answersComponents && answersComponents}
 
       <View style={styles.containerActive}>
-        <Text>
+        <SJText textLight>
           {' '}
           {(questionData?.order || 0) + 1} /{' '}
           {Object.keys(quizData?.questions || {}).length}
-        </Text>
+        </SJText>
       </View>
 
       <TouchableOpacity
@@ -105,7 +104,9 @@ const Quiz = ({
           // navigation?.goBack();
         }}
         style={styles.activeTitleContainer}>
-        <Text>Interrompi quiz</Text>
+        <SJText textLight underline>
+          Interrompi quiz
+        </SJText>
       </TouchableOpacity>
     </ScrollView>
   );

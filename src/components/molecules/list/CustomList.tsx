@@ -4,7 +4,6 @@ import styles from './ListStyles';
 import {ListProps} from '../../../interfaces/atomInterface';
 
 const CustomList = ({data,isNavigate,navigate,style}: ListProps) => {
-  console.warn(style)
   return (
     <SafeAreaView style={[styles.sectionContainer,style]}>
       <FlatList
