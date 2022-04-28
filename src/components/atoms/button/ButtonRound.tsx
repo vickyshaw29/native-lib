@@ -2,17 +2,19 @@ import React from 'react';
 import useTheme from '../../../hooks/theme/useTheme';
 import {TouchableOpacity, ActivityIndicator, TextStyle,GestureResponderEvent} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './ButtonStyles';
+
+//getting error from the library ;
 
 type ButtonRoundProps={
     disabled?:boolean,
-    small?:string,
+    small?:boolean,
     isLoading?:boolean,
     iconName?:string,
     style:TextStyle,
     onPress: (event: GestureResponderEvent) => void
 }
-
 const ButtonRound: React.FC<ButtonRoundProps> = ({disabled,small,isLoading,iconName,style,onPress}) => {
   const {palette} = useTheme();
   // const primaryColor = activeApp?.data?.modules?.core?.theme?.palette?.primary || '#0000f4';
@@ -40,6 +42,7 @@ const ButtonRound: React.FC<ButtonRoundProps> = ({disabled,small,isLoading,iconN
             color: '#ffffff',
           }}
           name={iconName?iconName:''}
+          
         />
       )}
     </TouchableOpacity>

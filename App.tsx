@@ -6,7 +6,7 @@ import QuizPage from './src/pages/QuizPage';
 import Storybook from './storybook';
 
 //if true stories will be visible;
-let LOAD_STORYBOOk = false;
+let LOAD_STORYBOOk = true;
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (

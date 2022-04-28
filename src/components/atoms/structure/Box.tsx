@@ -10,7 +10,8 @@ const Box:React.FC<{ style?: any, primary?: boolean,children:ReactNode }> = ({ s
         style={{
             ...(props.primary && {backgroundColor: primaryColor}),
             ...style,
-        }}>
+        }}
+        >
         {props.children}
     </View>
     )
