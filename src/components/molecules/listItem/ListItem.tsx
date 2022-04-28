@@ -13,7 +13,7 @@ type Props = {
   finished?: boolean;
   checked?: boolean;
   showMore?: string;
-  onChange: any;
+  onChange?: any;
   style?: TextStyle;
 };
 

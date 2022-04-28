@@ -5,6 +5,7 @@ import HTML from 'react-native-render-html';
 import useTheme from '../../../hooks/theme/useTheme';
 import styles from './listStyles'
 
+//getting error ir showmore component
 
 type ShowMoreBoxProps = {
 	collapsed: boolean;

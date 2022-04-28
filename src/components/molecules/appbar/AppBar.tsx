@@ -5,6 +5,8 @@ import {View, TouchableWithoutFeedback} from 'react-native';
 import {IconPlaceholder} from '../../atoms';
 import styles from './AppBarStyles';
 
+
+// getting error while rendering this component in the storybook
 const AppBar: React.FC<{
   title: string;
   onLeftIconName?: string;
