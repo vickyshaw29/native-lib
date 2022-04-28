@@ -7,3 +7,4 @@ export {default as CustomList} from './list/CustomList';
 export {default as CollapsableListItem} from './listItem/ListItem'
 export {default as showMore} from './listItem/ShowMoreBox'
 export {default as ChartProgress} from './charts/ChartProgress'
+export {default as Card} from './card/Card'
