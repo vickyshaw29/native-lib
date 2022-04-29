@@ -1,10 +1,12 @@
 import { storiesOf } from '@storybook/react-native'
 import { CenterView } from '../../../../storybook/stories/CenterView'
 import React from 'react'
-import CustomButton from './CustomButton'
+import Button from './Button'
 
-storiesOf('atoms/CustomButton', module)
+storiesOf('atoms/Button', module)
   .addDecorator((getStory) => <CenterView>{ getStory() }</CenterView>)
   .add('confirm', () => (
-    <CustomButton title="Confirm" color="red" onPress={()=>console.warn("clicked")}/>
+    <Button textStyle={{color:'red'}}>
+      Confirm
+    </Button>
   ))

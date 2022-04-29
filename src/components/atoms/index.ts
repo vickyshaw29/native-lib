@@ -1,5 +1,5 @@
-export {default as Button} from './button/CustomButton'
 export {default as ButtonRound} from './button/ButtonRound'
+export {default as Button} from './button/Button'
 export {default as Question} from './question/Question'
 export {default as Answer} from './answer/Answer'
 export {default as H1} from './typography/H1';
