@@ -1,4 +1,5 @@
 // import { evaluateConditions } from "../../../../app/query";
+import { evaluateCondition } from "./evaluate";
 import { QuizDataT,ResultI,Feedback } from "../../interfaces/QuizInterface";
 import lodash from 'lodash'
 
@@ -131,7 +132,7 @@ export default class QuizUtils {
         }
 
     }  
-    static getQuizFeedback = ({ quizData, feedbackOptions, quizResult }: { quizData: QuizDataT, feedbackOptions: Feedback[], quizResult: ResultI }) => {
+    static getQuizFeedbacks = ({ quizData, feedbackOptions, quizResult }: { quizData: QuizDataT, feedbackOptions: Feedback[], quizResult: ResultI }) => {
                 
 
         if(!feedbackOptions){
@@ -146,20 +147,15 @@ export default class QuizUtils {
 
 
 
-        const lastValidFeedback = feedbackOptions?.reduce<Feedback | null>((lastValidFeedback ,quizFeedbackOption) => {
+        const quizFeedbacks = feedbackOptions?.filter((feedbackOption) => {
 
 
-            // if(evaluateConditions(quizFeedbackOption.conditions, context)){
-            //     return quizFeedbackOption
-            // }else{
-            //     return lastValidFeedback
-            // }
+            if(evaluateCondition(feedbackOption?.conditions, context)){
+                return feedbackOption
+            }
 
-        }, null)
-
-
-        return lastValidFeedback
-
+        })
+        return quizFeedbacks
     }
 
     static getAreaReport = ({ topicId, quizData, feedbackAreaOptions, quizResult }: { topicId: string, quizData: QuizDataT, feedbackAreaOptions: Feedback[], quizResult: ResultI }): AreaReportT | null=> {

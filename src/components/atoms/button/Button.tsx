@@ -41,6 +41,7 @@ const Button: React.FC<any> = ({
       style={[
         styles.btnContainer,
         {
+          // backgroundColor: props.disabled ? disabledColor : backgroundColor,
           backgroundColor: props.disabled ? disabledColor : backgroundColor,
           ...(outline ? outlineContainerStyle : {}),
           ...containerStyle,
@@ -52,7 +53,7 @@ const Button: React.FC<any> = ({
       ) : (
         <SJText
           style={{
-            color: '#ffffff',
+            color: '#fff',
             fontSize: 16,
             textAlign: 'center',
             fontWeight: 'bold',

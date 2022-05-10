@@ -8,6 +8,7 @@ import {
 //import HTMLRenderer from '../../HTMLRenderer';
 import QuizUtils from '../../../utils/quiz/quizUtils';
 import {Button} from '../../atoms';
+import {HTMLRenderer} from '../../molecules';
 
 type QuizFeedbackScreenPropsT = {
   quizData: QuizDataT;
@@ -43,7 +44,10 @@ const QuizFeedbackScreen = ({
     });
   return (
     <View>
-      {feedback && <Text>{feedback}</Text>}
+      {/* {feedback && <Text>{feedback}</Text>} */}
+      {feedback ? (
+        <HTMLRenderer componentData={{source: feedback, componentId: ''}} />
+      ) : null}
       <Button
         title="Continua"
         color=""
@@ -53,7 +57,10 @@ const QuizFeedbackScreen = ({
             answerId: activeAnswerId,
           });
         }}
-      />
+        // style={{padding:10}}
+        containerStyle={{backgroundColor: '#0000f4'}}>
+        Continua
+      </Button>
       {canRetryQuestion && (
         <Button
           title="Riprova"
@@ -61,7 +68,9 @@ const QuizFeedbackScreen = ({
           onPress={() => {
             retryQuestion({questionId: activeQuestionId});
           }}
-        />
+          containerStyle={{backgroundColor: '#005F73', marginVertical: 10}}>
+          Riprova
+        </Button>
       )}
     </View>
   );

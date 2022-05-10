@@ -103,3 +103,14 @@ export type Style={
     [key:string]:any|undefined
 }
 
+// 
+
+export type ComponentHTMLDataT = {
+    "groupLabel"?: string,
+    "settings"?: {
+        "hideHeader"?: boolean
+    },
+    "componentId": string,
+    "type"?: "html",
+    "source"? : string
+}
