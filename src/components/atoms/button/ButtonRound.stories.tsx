@@ -10,7 +10,7 @@ storiesOf('atoms/ButtonRound', module)
       disabled={false}
       small={true}
       isLoading={false}
-      iconName={"comments"}
+      iconName={"font"}
       style={{color: 'red'}}
       onPress={() => console.warn('clicked')}
     />
