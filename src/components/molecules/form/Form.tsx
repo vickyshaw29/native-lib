@@ -51,13 +51,13 @@ const Form = ({
         editable
       />
       {completed && (
-        <FontAwesome5
-          style={[
-            styles.icon,
-            {
-              color: palette.primary,
-            },
-          ]}
+        <FontAwesome5.Button
+          // style={[
+          //   styles.icon,
+          //   {
+          //     color: palette.primary,
+          //   },
+          // ]}
           name="check-circle"
         />
       )}

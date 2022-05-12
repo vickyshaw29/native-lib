@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     zIndex: 99,
   },
   textInput: {
-    fontFamily: 'DMSans-Regular',
+    // fontFamily: 'DMSans-Regular',
     backgroundColor: '#ffffff',
     color: '#000',
     borderRadius: 4,
