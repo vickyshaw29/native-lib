@@ -5,5 +5,5 @@ import {AppBar} from '..'
 storiesOf('molecules/AppBar', module)
   .addDecorator(getStory => getStory())
   .add('AppBar', () => (
-   <AppBar title="AppBar"/>
+   <AppBar title="AppBar" onRightIconName="font" onLeftIconName="font-awesome"/>
   ));

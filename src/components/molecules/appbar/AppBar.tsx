@@ -62,10 +62,12 @@ const AppBar: React.FC<{
           <IconPlaceholder />
         )}
         <View>
-          <TouchableWithoutFeedback
+          
+          {/* <TouchableWithoutFeedback
             onPress={() => {
               set_hiddenActionPressCount(hiddenActionPressCount + 1);
-            }}>
+            }}
+            > */}
             {/* <FirebaseStorageImage
 						path={logo}
 						style={{
@@ -74,7 +76,7 @@ const AppBar: React.FC<{
 							resizeMode: 'cover',
 						}}
 					/> */}
-          </TouchableWithoutFeedback>
+          {/* </TouchableWithoutFeedback> */}
         </View>
         {props.onRightIconName ? (
           <FontAwesome5.Button
