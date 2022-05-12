@@ -5,7 +5,7 @@ import { ViewBackHome } from '..';
 import SJText from '../typography/SJText';
 import {NavigationDecorator} from '../../../../storybook/StoryNavigator';
 
-storiesOf('atoms/ViewBackHome', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .addDecorator(NavigationDecorator)
   .add('ViewBackHome', () => (

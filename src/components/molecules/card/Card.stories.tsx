@@ -4,7 +4,7 @@ import {Card} from '..'
 import { CenterView } from '../../../../storybook/stories/CenterView';
 import { SJText } from '../../atoms';
 
-storiesOf('molecules/Card', module)
+storiesOf('molecules', module)
 .addDecorator((getStory) => <CenterView>{ getStory() }</CenterView>)
   .add('Card', () => (
    <Card>

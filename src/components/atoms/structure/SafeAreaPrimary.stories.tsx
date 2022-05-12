@@ -3,7 +3,7 @@ import {CenterView} from '../../../../storybook/stories/CenterView';
 import React from 'react';
 import {SafeAreaViewWithPrimaryBackground, SJText} from '..';
 
-storiesOf('atoms/SafeAreaPrimary', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('SafeArea', () => (
     <SafeAreaViewWithPrimaryBackground>

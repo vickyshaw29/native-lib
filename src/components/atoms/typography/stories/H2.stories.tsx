@@ -3,7 +3,7 @@ import {CenterView} from '../../../../../storybook/stories/CenterView'
 import React from 'react';
 import {H2} from '../..';
 
-storiesOf('atoms/H2', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('H2', () => (
    <H2>

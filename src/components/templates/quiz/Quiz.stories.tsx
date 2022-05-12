@@ -6,7 +6,7 @@ import {NavigationDecorator} from '../../../../storybook/StoryNavigator';
 
 
 
-storiesOf('templates/Quiz', module)
+storiesOf('templates', module)
   .addDecorator(getStory => getStory())
   .addDecorator(NavigationDecorator)
   .add('Quiz', () => (

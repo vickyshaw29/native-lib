@@ -3,9 +3,9 @@ import { CenterView } from '../../../../storybook/stories/CenterView'
 import React from 'react'
 import Button from './Button'
 
-storiesOf('atoms/Button', module)
+storiesOf('atoms', module)
   .addDecorator((getStory) => <CenterView>{ getStory() }</CenterView>)
-  .add('confirm', () => (
+  .add('Button', () => (
     <Button textStyle={{color:'red'}}>
       Confirm
     </Button>

@@ -13,7 +13,7 @@ let quizData = {
 };
 const firstQuestion = QuizUtils.getFirstQuestion({quizData});
 
-storiesOf('organisms/QuestionFeedback', module)
+storiesOf('organisms', module)
   .addDecorator(getStory => getStory())
   .addDecorator(NavigationDecorator)
   .add('QuestionFeedback', () => (

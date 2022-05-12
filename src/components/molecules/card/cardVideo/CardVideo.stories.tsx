@@ -3,7 +3,7 @@ import React from 'react';
 import {NavigationDecorator} from '../../../../../storybook/StoryNavigator';
 import {CardVideo} from '../..'
 
-storiesOf('molecules/CardVideo', module)
+storiesOf('molecules', module)
 .addDecorator((getStory) =>  getStory() )
 .addDecorator(NavigationDecorator)
   .add('CardVideo', () => (

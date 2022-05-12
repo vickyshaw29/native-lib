@@ -3,7 +3,7 @@ import {CenterView} from '../../../../storybook/stories/CenterView';
 import React from 'react';
 import {Box,SJText} from '..';
 
-storiesOf('atoms/Box', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Box', () => (
     <Box>

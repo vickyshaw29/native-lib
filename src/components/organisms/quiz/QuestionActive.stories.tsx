@@ -16,7 +16,7 @@ let quizData = {
 const firstQuestion = QuizUtils.getFirstQuestion({quizData});
 
 
-storiesOf('organisms/QuestionActive', module)
+storiesOf('organisms', module)
   .addDecorator(getStory => getStory())
   .addDecorator(NavigationDecorator)
   .add('ActiveQuestion', () => (

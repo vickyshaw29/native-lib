@@ -3,7 +3,7 @@ import { CenterView } from '../../../../storybook/stories/CenterView'
 import React from 'react'
 import {FirebaseStorageVideo} from '..'
 
-storiesOf('atoms/FirebaseStorageVideo', module)
+storiesOf('atoms', module)
   .addDecorator((getStory) => <CenterView>{ getStory() }</CenterView>)
   .add('FirebaseStorageVideo', () => (
       <FirebaseStorageVideo path="" />

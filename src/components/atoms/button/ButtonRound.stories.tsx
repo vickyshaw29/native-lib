@@ -3,7 +3,7 @@ import {CenterView} from '../../../../storybook/stories/CenterView';
 import React from 'react';
 import ButtonRound from './ButtonRound';
 
-storiesOf('atoms/ButtonRound', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('ButtonRound', () => (
     <ButtonRound

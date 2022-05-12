@@ -3,7 +3,7 @@ import { CenterView } from '../../../../storybook/stories/CenterView'
 import React from 'react'
 import {FirebaseStorageImage} from '..'
 
-storiesOf('atoms/FirebaseStorageImage', module)
+storiesOf('atoms', module)
   .addDecorator((getStory) => <CenterView>{ getStory() }</CenterView>)
   .add('FirebaseStorageImage', () => (
       <FirebaseStorageImage path="https://www.google.com"/>

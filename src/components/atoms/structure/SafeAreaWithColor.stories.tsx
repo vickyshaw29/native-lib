@@ -3,7 +3,7 @@ import {CenterView} from '../../../../storybook/stories/CenterView';
 import React from 'react';
 import {SafeAreaViewWithColor, SJText} from '..';
 
-storiesOf('atoms/SafeAreaWithColor', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('SafeAreaWithColor', () => (
     <SafeAreaViewWithColor color="green">

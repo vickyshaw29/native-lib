@@ -25,7 +25,7 @@ const feedback =
       answerId: firstQuestion.answerId,
     });
 
-storiesOf('molecules/HTMLRenderer', module)
+storiesOf('molecules', module)
   .addDecorator((getStory) => <CenterView>{ getStory() }</CenterView>)
   .addDecorator(NavigationDecorator)
   .add('HTMLRenderer', () => (

@@ -17,6 +17,6 @@ const questionData = QuizUtils.getQuestion({
   questionId: firstQuestion?.questionId,
 });
 
-storiesOf('atoms/Question', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Question', () => <Question questionData={questionData} />);

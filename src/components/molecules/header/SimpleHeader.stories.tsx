@@ -3,6 +3,6 @@ import React from 'react';
 import {CenterView} from '../../../../storybook/stories/CenterView';
 import {SimpleHeader} from '..';
 
-storiesOf('molecules/SimpleHeader', module)
+storiesOf('molecules', module)
   .addDecorator(getStory => getStory())
   .add('SimpleHeader', () => <SimpleHeader />);

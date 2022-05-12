@@ -3,6 +3,6 @@ import React from 'react';
 import { CenterView } from '../../../../storybook/stories/CenterView';
 import {Form} from '..';
 
-storiesOf('molecules/Form', module)
+storiesOf('molecules', module)
 .addDecorator((getStory) => getStory())
   .add('Form', () => <Form placeholder="Form"/>);

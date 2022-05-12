@@ -3,6 +3,6 @@ import React from 'react';
 import {CenterView} from '../../../../storybook/stories/CenterView';
 import {InterestAnalytic} from '..';
 
-storiesOf('molecules/InterestAnalytic', module)
+storiesOf('molecules', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('InterestAnalytic', () => <InterestAnalytic />);

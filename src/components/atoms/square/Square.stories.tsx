@@ -4,7 +4,7 @@ import React from 'react';
 import Square from './Square';
 import SJText from '../typography/SJText';
 
-storiesOf('atoms/Square', module)
+storiesOf('atoms', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Square', () => (
     <Square>

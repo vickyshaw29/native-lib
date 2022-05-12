@@ -19,7 +19,7 @@ const questionData = QuizUtils.getQuestion({
   questionId: firstQuestion?.questionId,
 });
 
-storiesOf('templates/Dashboard', module)
+storiesOf('templates', module)
   .addDecorator(getStory => getStory())
   .addDecorator(NavigationDecorator)
   .add('Dashboard', () => (
